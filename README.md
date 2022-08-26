@@ -25,3 +25,39 @@ Other benefits is the goal of the SOLID principles is to reduce dependencies so 
 ### How we implement SOLID Principles?
 
 To implement the SOLID Principles everything starts from habit and when we do it often it will be automatically programmed in us, and how, will be explained and given an example of the SOLID Principles project in this repo.
+
+## Concepts of SOLID principles
+
+### 1. Single-Responsibility Principle
+
+Single-responsibility Principle (SRP) states:
+
+A class should have one and only one reason to change, meaning that a class should have only one job.
+
+**Examples**
+
+```typescript
+export class EmployeeRepository {
+  public saveData(employee: Employee) {
+    // In real world you should separate in repository db
+    // If in FE like for HTTP Request
+    //  If in BE saving to DB SQL
+    console.log(employee, "Save TO DB");
+  }
+}
+```
+
+```typescript
+export class TaxCalculator {
+  public calculateTaxes(employee: Employee) {
+    if (employee.getEmployeeType() == "fulltime") {
+      return (Number(employee.getEmployeeSalary()) * 10) / 100;
+    } else {
+      return (Number(employee.getEmployeeSalary()) * 5) / 100;
+    }
+  }
+}
+```
+
+**Explanation**
+We separate the saveData method into EmployeeRepository and we also separate the TaxCalculator cohesion with what the method or class does with only one responsibility.
