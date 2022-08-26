@@ -263,8 +263,19 @@ From the code above we can see that the DBProductRepository depends on the abstr
 6.  Readable: Easy and readable.
 7.  Independent: Reduce dependencies
 8.  Reusable: Reusable code
+9.  Saving time and money for the company
 
 ### Disadvantages Of SOLID Principles
 
 1.  To many small business entities (I.e. SRP)
 2.  Take more time for development in the begining.
+
+### Playground
+
+To make it easier, if you want to run this repo project, it is already embedded and can be run directly without clone and install the Typscript environment on your computer.
+
+1. https://replit.com/@zidniryi/solid-ts1-singgle-principle-responsibility#index.ts
+2. https://replit.com/@zidniryi/solid-ts2-open-closed-principle
+3. https://replit.com/@zidniryi/solid-ts3-liskov-subtitution-principle
+4. https://replit.com/@zidniryi/solid-ts4-interface-segregation-principle
+5. https://replit.com/@zidniryi/solid-ts5-dependency-inversion-principle
