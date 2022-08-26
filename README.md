@@ -279,3 +279,9 @@ To make it easier, if you want to run this repo project, it is already embedded 
 3. https://replit.com/@zidniryi/solid-ts3-liskov-subtitution-principle
 4. https://replit.com/@zidniryi/solid-ts4-interface-segregation-principle
 5. https://replit.com/@zidniryi/solid-ts5-dependency-inversion-principle
+
+### Conclusion
+
+For the solid design of this repository you can be implemented in Other Programming Languages as per your requirement. You can try it with the Programming Language that you are currently fluent in, you can use PHP, JAVA, DART, KOTLIN and others.
+
+The author uses the Typescripts Programming Language to make it easier and can be run online, hopefully useful and helpful.
