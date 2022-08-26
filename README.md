@@ -218,3 +218,37 @@ export class CanonPrinter implements IPrint {
 
 **Explanation**
 We make the interface according to our needs, we can see that we implement IPrint, IScan, IFax Interfaces in the XeroxMainCenter class and we implement 1 IPrint Interface class in the CanonPrinter class because CanonPrinter can only and requires 1 class that needs to be implemented.
+
+### 5. Dependency Inversion Principle
+
+Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions. This principle allows for decoupling.
+
+**Examples**
+
+```typescript
+export class DBProductRepository implements ProductRepository {
+  public getAllProductsName() {
+    const dataList = ["soap", "shampo"];
+    return dataList;
+  }
+}
+```
+
+```typescript
+export interface ProductRepository {
+  getAllProductsName(): Array<string>;
+}
+```
+
+```typescript
+export class ProductFactory {
+  [x: string]: any;
+
+  public static create(): ProductFactory {
+    return new DBProductRepository();
+  }
+}
+```
+
+**Explanation**
+From the code above we can see that the DBProductRepository depends on the abstract Interface of the ProductRepository class which is then rewritten in the ProductFactory class so that it can be called ProductCatalog so it depends on abstractions.
