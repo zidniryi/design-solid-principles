@@ -61,3 +61,36 @@ export class TaxCalculator {
 
 **Explanation**
 We separate the saveData method into EmployeeRepository and we also separate the TaxCalculator cohesion with what the method or class does with only one responsibility.
+
+### 2. Open-Closed Principle
+
+Open-closed Principle (OCP) states:
+
+Objects or entities should be open for extension but closed for modification.
+
+This means that a class should be extendable without modifying the class itself.
+
+**Examples**
+
+```typescript
+// This is Closed class we should modify this class
+// Just imagine like laptop you can add accesory like headphone, speaker, external keyboard but you can't allow to modify the processor
+export class InsuerencePremiumCalculator {
+  public premiumUserCalculator(customer: CustomerProfile) {
+    if (customer.isLoyalCustomer()) {
+      return 20;
+    }
+    return 0;
+  }
+}
+```
+
+```typescript
+//  The intrefcae or extentions we used for bridge the Closed class with Open Extention class
+export interface CustomerProfile {
+  isLoyalCustomer(): boolean;
+}
+```
+
+**Explanation**
+We create interfaces for all Users, so when a new User Type is added we don't need to change the source class library that we have.
