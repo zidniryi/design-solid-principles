@@ -94,3 +94,50 @@ export interface CustomerProfile {
 
 **Explanation**
 We create interfaces for all Users, so when a new User Type is added we don't need to change the source class library that we have.
+
+### 3. Liskov Substitution Principle
+
+The Liskov Substitution Principle (LSP) states that objects of a superclass should be replaceable with objects of its subclasses without breaking the application.
+
+**Examples**
+
+```typescript
+export class Product {
+  // Initial discount product
+  protected discount: number = 20;
+  // The general discount product
+  public getDiscount(): number {
+    return Number(this.discount);
+  }
+}
+```
+
+```typescript
+export class InHouseProduct extends Product {
+  // Override the discount inheritence
+  override getDiscount() {
+    this.applyDiscount();
+    return this.discount;
+  }
+
+  // Method if inhouse product
+  public applyDiscount() {
+    return (this.discount = this.discount * 1.5);
+  }
+}
+```
+
+```typescript
+import { PricingUtils } from "./PricingUtils";
+
+const pricingUtils = new PricingUtils();
+
+console.log(pricingUtils.getMappingDiscount());
+
+/**
+ * LISKOV need working code and correctness code
+ * Subtitution should
+ * Breaking the hierarchy
+ * Not Ask, Tell
+ */
+```
