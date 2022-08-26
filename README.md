@@ -2,6 +2,8 @@
 
 Architectural Design SOLID Principles that are Easy to Understand and Apply
 
+![Design SOLID Principles](/design-solid-principles.png)
+
 ## Question
 
 Before we do something it's good we make a question to ourselves, the possibility of something we will do.
