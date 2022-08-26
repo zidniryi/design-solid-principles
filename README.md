@@ -141,3 +141,80 @@ console.log(pricingUtils.getMappingDiscount());
  * Not Ask, Tell
  */
 ```
+
+**Explanation**
+We override the get Discount method in the InHouse Product class to provide a different discount so that when we mapped it or called the method we created it doesn't break.
+
+### 4. Interface Segregation Principle
+
+Interface Segregation Principle
+Interface segregation principle states:
+
+A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use.
+
+**Examples**
+
+```typescript
+import { IFax } from "./IFax";
+import { IPrint } from "./IPrint";
+import { IScan } from "./IScan";
+
+export class XeroxMainCenter implements IPrint, IScan, IFax {
+  print(): void {
+    // Real world code should here
+    // For sample we just print here
+    console.log("Method not implemented. Print");
+  }
+
+  getPrintSpoolDetail(): void {
+    // Real world code should here
+    // For sample we just print here
+    console.log("Method not implemented. Print Detail");
+  }
+
+  scan(): void {
+    // Real world code should here
+    // For sample we just print here
+    console.log("Method not implemented. Scan");
+  }
+
+  scanPhoto(): void {
+    // Real world code should here
+    // For sample we just print here
+    console.log("Method not implemented. Scan Photo");
+  }
+
+  fax(): void {
+    // Real world code should here
+    // For sample we just print here
+    console.log("Method not implemented. Fax");
+  }
+
+  faxInternet(): void {
+    // Real world code should here
+    // For sample we just print here
+    console.log("Method not implemented. Fax With Internet");
+  }
+}
+```
+
+```typescript
+import { IPrint } from "./IPrint";
+
+export class CanonPrinter implements IPrint {
+  print(): void {
+    // Real world code should here
+    // For sample we just print here
+    console.log("Method not implemented. Print");
+  }
+
+  getPrintSpoolDetail(): void {
+    // Real world code should here
+    // For sample we just print here
+    console.log("Method not implemented. Print Detail");
+  }
+}
+```
+
+**Explanation**
+We make the interface according to our needs, we can see that we implement IPrint, IScan, IFax Interfaces in the XeroxMainCenter class and we implement 1 IPrint Interface class in the CanonPrinter class because CanonPrinter can only and requires 1 class that needs to be implemented.
