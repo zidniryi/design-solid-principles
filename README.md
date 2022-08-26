@@ -20,7 +20,7 @@ Every programmer/engineer who jumps into a project for the efficiency and effect
 
 Every time we write our code, whether it's creating new features, improvements or enhancements, we must pay attention to aspects of the SOLID Principles.
 
-### Why whe used SOLID Principles?
+### Why we used SOLID Principles?
 
 Because by using SOLID Principles we will create a code that is clean, easy to read, maintain, and has effectiveness and efficiency and will save time and effort for us as programmers or engineers and will save money for our company.
 
