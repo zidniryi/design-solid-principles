@@ -252,3 +252,19 @@ export class ProductFactory {
 
 **Explanation**
 From the code above we can see that the DBProductRepository depends on the abstract Interface of the ProductRepository class which is then rewritten in the ProductFactory class so that it can be called ProductCatalog so it depends on abstractions.
+
+### Benefits Of SOLID Principles
+
+1.  Clean: clean and standard code.
+2.  Maintainable: Manageable and easy for maintenance.
+3.  Scalable: Easy to refactor or change code.
+4.  Redundancy: Avoids redundant code.
+5.  Testable: Can be easily unit tested.
+6.  Readable: Easy and readable.
+7.  Independent: Reduce dependencies
+8.  Reusable: Reusable code
+
+### Disadvantages Of SOLID Principles
+
+1.  To many small business entities (I.e. SRP)
+2.  Take more time for development in the begining.
